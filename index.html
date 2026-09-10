@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Just For You ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="gate" class="gate">
+  <div class="gate-card">
+    <div class="tiny">A PRIVATE LITTLE SURPRISE</div>
+    <div class="lock">🔐</div>
+    <h1>This little world<br>is only for you.</h1>
+    <p>Enter our secret password ❤️</p>
+    <input id="password" type="password" placeholder="Our secret..." autocomplete="off">
+    <button id="unlock">OPEN MY SURPRISE ❤️</button>
+    <small id="passwordError"></small>
+    <p class="passwordHint">Hint: one of our most special dates 😉</p>
+  </div>
+</div>
+
+<main id="app" class="locked">
+<button id="musicBtn" class="music">🔇</button>
+<div id="particles"></div>
+
+<section class="screen active" id="s1">
+  <p class="eyebrow">a little something, for you</p>
+  <button class="big-heart" id="heart">♥</button>
+  <p class="tap">tap the heart</p>
+</section>
+
+<section class="screen pink" id="s2">
+  <p class="eyebrow light">make a wish... ✨</p>
+  <h1>Happy<br>Birthday</h1><div class="gold"></div>
+  <p>to someone worth celebrating ❤️</p>
+  <button class="btn next" data-to="s3">continue →</button>
+</section>
+
+<section class="screen purple" id="s3">
+  <p class="eyebrow light">first things first 🎂</p>
+  <div class="cake"><div class="flame">🔥</div><div class="icing"></div></div>
+  <h2>Happy Birthday, <span class="name">Nayuuu</span>! ❤️</h2>
+  <p>Today isn't just another day...<br>it's the day my favourite person was born.</p>
+  <button class="btn next" data-to="s4">there's more →</button>
+</section>
+
+<section class="screen purple" id="s4">
+  <p class="eyebrow light">pop the balloons 🎈</p>
+  <p>5 balloons. 5 reasons you're loved.<br>Pop them all ❤️</p>
+  <div id="balloons" class="balloons"></div>
+  <div id="reason" class="reason hidden"></div>
+  <div id="progress">0 / 5 popped</div>
+  <button id="balloonNext" class="btn hidden">show me more ❤️</button>
+</section>
+
+<section class="screen memories" id="s5">
+  <p class="eyebrow">our favourite memories 📸</p>
+  <div class="cards">
+    <article><div class="photo"><img src="photos/photo1.jpg" onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='📷<small>Add photo1.jpg</small>'"></div><h3>The beginning of our story...</h3><p>Some moments become precious before we even realise it.</p></article>
+    <article><div class="photo"><img src="photos/photo2.jpg" onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='📷<small>Add photo2.jpg</small>'"></div><h3>The day we chose each other. 💍</h3><p>And every chapter after that became my favourite.</p></article>
+    <article><div class="photo"><img src="photos/photo3.jpg" onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='📷<small>Add photo3.jpg</small>'"></div><h3>Our little world. 👨‍👩‍👦</h3><p>Our family made ordinary days extraordinary.</p></article>
+    <article><div class="photo"><img src="photos/photo4.jpg" onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='📷<small>Add photo4.jpg</small>'"></div><h3>The silly moments. 😂</h3><p>Laughing with you is one of my favourite things.</p></article>
+    <article><div class="photo"><img src="photos/photo5.jpg" onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='📷<small>Add photo5.jpg</small>'"></div><h3>My favourite people. ❤️</h3><p>My favourite place will always be beside you.</p></article>
+  </div>
+  <button class="btn next" data-to="s6">our story →</button>
+</section>
+
+<section class="screen timeline" id="s6">
+  <p class="eyebrow">OUR STORY ❤️</p>
+  <div class="story">
+    <div><b>❤️</b><h3>We met</h3><p>The beginning of everything.</p></div>
+    <div><b>💕</b><h3>We fell in love</h3><p>Two lives slowly becoming one story.</p></div>
+    <div><b>💍</b><h3>We said “I do”</h3><p>A promise to keep choosing each other.</p></div>
+    <div><b>👶</b><h3>Our little blessing</h3><p>Our world became even more beautiful.</p></div>
+    <div><b>❤️</b><h3>And here we are...</h3><p>Still writing our story, one day at a time.</p></div>
+  </div>
+  <button class="btn next" data-to="s7">one little game 🎮</button>
+</section>
+
+<section class="screen quiz" id="s7">
+  <p class="eyebrow">how well do you know us? 👀❤️</p>
+  <div id="quiz"></div><button id="quizNext" class="btn">next question →</button>
+</section>
+
+<section class="screen letterScreen" id="s8">
+  <p class="eyebrow">one last thing...</p>
+  <button id="envelope" class="envelope">💌</button>
+  <p id="openText">open my letter</p>
+  <div id="letter" class="letter hidden">
+    <div class="paper">
+      <h2>My Dearest ❤️</h2>
+      <p>Happy Birthday to the person who means more to me than words can explain.</p>
+      <p>We've shared beautiful moments, silly moments, difficult moments, and so many memories that I wish I could freeze forever.</p>
+      <p>Thank you for being there for me, for understanding me, for making me smile, and for being my partner through everything.</p>
+      <p>Watching us build our little family together makes me feel incredibly grateful. I don't need a perfect life. I just want a life where we keep choosing each other, supporting each other, laughing together and growing together.</p>
+      <p>May Allah bless you with a long, beautiful and successful life, fill your heart with peace, and put barakah in everything you do. 🤲❤️</p>
+      <p>Happy Birthday, my love. Here's to you, here's to us, and here's to all the beautiful memories still waiting for us.</p>
+      <p class="sign">Forever yours,<br><strong>Your Love ❤️</strong></p>
+    </div>
+    <button id="letterNext" class="btn">my birthday wishes ✨</button>
+  </div>
+</section>
+
+<section class="screen wishes" id="s9">
+  <p class="eyebrow light">if I could make one wish for you...</p>
+  <div id="wishText"></div>
+  <button id="finalBtn" class="btn hidden">one final surprise 🎁</button>
+</section>
+
+<section class="screen final" id="s10">
+  <div id="confetti"></div>
+  <div class="finalHeart">♥</div>
+  <h1>HAPPY BIRTHDAY,<br><span class="name">MY LOVE</span> ❤️</h1>
+  <p>May your life always be filled with happiness, peace, success and endless reasons to smile.</p>
+  <h2>I love you. Always. ❤️</h2>
+  <button id="secret" class="secret">P.S. 👀</button>
+  <div id="secretMsg" class="secretMsg hidden">You really thought that was everything? 😂<br><br>Your real surprise is waiting for you... 🎁❤️</div>
+</section>
+</main>
+<audio id="audio" loop><source src="music/music.mp3" type="audio/mpeg"></audio>
+<script src="script.js"></script>
+</body>
+</html>
