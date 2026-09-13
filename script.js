@@ -11,11 +11,17 @@ function burst(x,y){for(let i=0;i<12;i++){let e=document.createElement("div");e.
 $("#heart").onclick=()=>{burst(innerWidth/2,innerHeight/2);startMusic();setTimeout(()=>show("s2"),650)};
 $$(".next").forEach(b=>b.onclick=()=>show(b.dataset.to));
 const messages=[
-"REASON NO. 1 ❤️|You remember the little things I forget.",
-"REASON NO. 2 ❤️|You believe in me when I don't believe in myself.",
+"REASON NO. 1 ❤️|I love the way you make me feel safe, loved and cared for.",
+"REASON NO. 2 ❤️|You are not just my husband you are my favourite person to annoy forever.",
 "REASON NO. 3 ❤️|You make ordinary days feel special.",
-"REASON NO. 4 ❤️|You make our little family feel like home.",
-"REASON NO. 5 ❤️|Your laugh is one of my favourite sounds."
+"REASON NO. 4 ❤️|One of my favourite blessings in life is the little family we have built together.",
+"REASON NO. 5 ❤️|I admire your strength, your patience and all the little things you do that sometimes go unnoticed.",
+"REASON NO. 6 ❤️|You make our little family feel like home.",
+"REASON NO. 7 ❤️|Your laugh is one of my favourite sounds.",
+"REASON NO. 8 ❤️|No matter how many birthdays come and go, I hope we keep making silly, beautiful memories together.",
+"REASON NO. 9 ❤️|If I could choose my partner all over again, I would still choose YOU. Always.",
+"REASON NO. 10 ❤️|You are not just my husband you are my favourite person to annoy forever.",
+"REASON NO. 11 ❤️|May Allah put endless barakah in your life and make every difficult road easy for you.",
 ];
 let popped=0;
 messages.forEach((m,i)=>{let b=document.createElement("button");b.className="balloon";b.setAttribute("aria-label","Pop balloon "+(i+1));b.onclick=()=>{if(b.classList.contains("popped"))return;b.classList.add("popped");burst(b.getBoundingClientRect().left+30,b.getBoundingClientRect().top+30);popped++;let [a,c]=m.split("|");$("#reason").classList.remove("hidden");$("#reason").innerHTML="<b>"+a+"</b>"+c;$("#progress").textContent=popped+" / 5 popped";if(popped===5)$("#balloonNext").classList.remove("hidden")};$("#balloons").append(b)});
