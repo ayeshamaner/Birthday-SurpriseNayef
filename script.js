@@ -22,9 +22,9 @@ const messages=[
 "REASON NO. 9 ❤️|If I could choose my partner all over again, I would still choose YOU. Always.",
 "REASON NO. 10 ❤️|You are not just my husband you are my favourite person to annoy forever.",
 "REASON NO. 11 ❤️|May Allah put endless barakah in your life and make every difficult road easy for you.",
-"REASON NO. 12 ❤️|If I could choose my partner all over again, I would still choose YOU. Always.",
-"REASON NO. 13 ❤️|You are not just my husband you are my favourite person to annoy forever.",
-"REASON NO. 14 ❤️|May Allah put endless barakah in your life and make every difficult road easy for you."
+"REASON NO. 12 ❤️|You are my safe place, my biggest comfort, and the person I want beside me through every chapter of life❤️.",
+"REASON NO. 13 ❤️|I may not say it every day, but I notice every little thing you do for us. Thank you for loving and caring for me. 🥹❤️",
+"REASON NO. 14 ❤️|“No matter how life changes, my heart will always choose you. May Allah keep you happy, healthy, and close to me always. 🤲❤️"
 ];
 let popped=0;
 messages.forEach((m,i)=>{let b=document.createElement("button");b.className="balloon";b.setAttribute("aria-label","Pop balloon "+(i+1));b.onclick=()=>{if(b.classList.contains("popped"))return;b.classList.add("popped");burst(b.getBoundingClientRect().left+30,b.getBoundingClientRect().top+30);popped++;let [a,c]=m.split("|");$("#reason").classList.remove("hidden");$("#reason").innerHTML="<b>"+a+"</b>"+c;$("#progress").textContent=popped+" / 14 popped";if(popped===14)$("#balloonNext").classList.remove("hidden")};$("#balloons").append(b)});
