@@ -27,7 +27,7 @@ const messages=[
 "REASON NO. 14 ❤️|May Allah put endless barakah in your life and make every difficult road easy for you."
 ];
 let popped=0;
-messages.forEach((m,i)=>{let b=document.createElement("button");b.className="balloon";b.setAttribute("aria-label","Pop balloon "+(i+1));b.onclick=()=>{if(b.classList.contains("popped"))return;b.classList.add("popped");burst(b.getBoundingClientRect().left+30,b.getBoundingClientRect().top+30);popped++;let [a,c]=m.split("|");$("#reason").classList.remove("hidden");$("#reason").innerHTML="<b>"+a+"</b>"+c;$("#progress").textContent=popped+" / 5 popped";if(popped===5)$("#balloonNext").classList.remove("hidden")};$("#balloons").append(b)});
+messages.forEach((m,i)=>{let b=document.createElement("button");b.className="balloon";b.setAttribute("aria-label","Pop balloon "+(i+1));b.onclick=()=>{if(b.classList.contains("popped"))return;b.classList.add("popped");burst(b.getBoundingClientRect().left+30,b.getBoundingClientRect().top+30);popped++;let [a,c]=m.split("|");$("#reason").classList.remove("hidden");$("#reason").innerHTML="<b>"+a+"</b>"+c;$("#progress").textContent=popped+" / 14 popped";if(popped===14)$("#balloonNext").classList.remove("hidden")};$("#balloons").append(b)});
 $("#balloonNext").onclick=()=>show("s14");
 const questions=[
 ["What would I choose for an ordinary day with you?",["A quiet day together ❤️","A day without you","Only a fancy party","Nothing special"],0],
